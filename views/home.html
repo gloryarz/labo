@@ -18,12 +18,29 @@
     <div class="container">
         <section class="col s12 m6" id="postForm">
             <h4 id="dataName"></h4>
-            <input type="text" id="userName">
-            <input type="text" id="postText" placeholder="Comentario">
-            <input type="button" id="btnPost" class="btn pink mb" value="Publicar">
+            
+            
         </section>
         <section id="comentarios">
         </section>
+        <div>
+            <h6>Crear publicación</h6>
+            <h5>Nombre</h5>
+            <input type="text" id="userName">
+            <h5>Título</h5>
+            <input type="text" id="title">
+            <h5>Mensaje</h5>
+            <input type="text" id="postText" placeholder="Comentario">
+            <button class="btn-large">Foto/Vídeo</button>
+            <button class="btn-large">Ubicación</button>
+            <button class="btn" onclick="getTheme(value)" value="Consulta">Consulta</button>
+            <button class="btn" onclick="getTheme(value)" value="Desahogo">Desahogo</button>
+            <button class="btn"onclick="getTheme(value)" value="Apoyo">Apoyo</button>
+            <button class="btn-large">Cancelar</button>
+            <input type="button" id="btnPost" class="btn-large" value="Publicar">
+
+        </div>
+
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>

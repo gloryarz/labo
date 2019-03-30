@@ -55,3 +55,7 @@ map.addObject(marker);
   })
 };
 
+
+
+// https://github.com/heremaps/examples/#simple-examples
+

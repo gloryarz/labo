@@ -19,18 +19,30 @@ const bntMessage = document.getElementById('btnMessage');
 const userPrintPhoto = document.getElementById('user-photo');
 const addingPhoto = document.getElementById('photo');
 var db = firebase.firestore(); // Firestore
+const inputTitle = document.getElementById('title');
 
-
-let user = 'Drop'
 let userUid = 'yepp'
 let commented = []
-dataName.innerHTML = user;
+let asignTheme;
+
+const getTheme = (x) => {
+  asignTheme = x
+}
 
 // Función para subir mensaje a firestore
 btnPost.addEventListener('click', el => {
   // Se obtiene el valor del input
   let posted = postText.value;
   let userNameValue = userName.value;
+  let getTitle = inputTitle.value;
+  if(Boolean(asignTheme) != true){
+    alert('Por favot asigna un tema')
+  }else{
+    console.log(asignTheme)
+  }
+  if (Boolean(userNameValue) != true){
+    userNameValue = "Anónimo"
+  }
   // Si el input está vacío se alerta al usuario
   if (posted === '' || posted === ' ') {
     alert('Escribe un mensaje');
@@ -39,7 +51,9 @@ btnPost.addEventListener('click', el => {
         user: userUid, // ID del usuario logeado
         name: userNameValue, // Nombre del usuario
         post: posted, // Texto del post
-        comments: commented
+        comments: commented,
+        title : getTitle, 
+        theme : asignTheme
       })
       .then(function (docRef) {
         console.log('Document written with ID: ', docRef.id);
@@ -116,6 +130,17 @@ const printPost = (postID, postName, text, userId, bringComments) => {
         </div>
       </div>`;
 };
+
+/*
+<ul class="collection">
+      <li class="collection-item">
+          <i class="material-icons avatar large">account_circle</i>
+          <span class="title">Title</span>
+          <p>First Line
+          </p>
+        </li>
+  </ul>
+*/
 
 /*commID: "pc5KEyoUHF7ayvz6GPSD"
 commSpaceID: "pc5KEyoUHF7ayvz6GPSD1"
