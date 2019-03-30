@@ -20,33 +20,7 @@ const userPrintPhoto = document.getElementById('user-photo');
 const addingPhoto = document.getElementById('photo');
 var db = firebase.firestore(); // Firestore
 
-/* Con index.js se agrega a localStorage un key mail,
-el que contiene un string con un correo electrónico, la palabra facebook
-o google. También se guarda el uid de cada usuario y su foto.
- */
-/*
-// Se agrega a la variable user el valor de localStorage de la key mail
-let user = localStorage.getItem('mail');
-// Se agrega a la variable userUid el uid del usuario que inició sesión
-let userUid = localStorage.getItem('userUid');
-console.log(userUid);*/
 
-/* Se declara la variable userPhoto, en la función bringData se hace una 
-condicional que determina el método de inicio de sesión del usuario, si 
-el key mail equivale a google o facebook la variable user cambia su valor
-al nombre de usuario de la red utilizada, además a userPhoto se le
-asigna la URL de la foto del usuario, si no la variable user
-mantiene la dirección de correo electrónico */
-/*
-let userPhoto;
-const bringData = () => {
-  if (user === 'google' || user === 'facebook') {
-    user = localStorage.getItem('display');
-    userPhoto = localStorage.getItem('photo');
-  } else {
-  }
-};
-bringData();*/
 let user = 'Drop'
 let userUid = 'yepp'
 let commented = []
@@ -98,7 +72,6 @@ db.collection('posted').onSnapshot((querySnapshot) => {
     let postToPrint = doc.data().comments;
     printComments(postToPrint);
   });
-
 });
 
 // Función para imprimir
@@ -114,7 +87,7 @@ const printPost = (postID, postName, text, userId, bringComments) => {
   let newID = postID + 1;
   let commentID = postID + 2;
   console.log('inside', bringComments)
-  if (userUid === userId) {
+  
     comentarios.innerHTML += `<div class="row">
         <div class="col s12 m6">
           <div class="card blue-grey lighten-5">
@@ -142,23 +115,6 @@ const printPost = (postID, postName, text, userId, bringComments) => {
           </div>
         </div>
       </div>`;
-  } else {
-    comentarios.innerHTML += `<div class="row">
-        <div class="col s12 m6">
-          <div class="card white">
-            <div class="card-content black-text">
-              <span class="card-title pink-text">${postName}</span>
-              <p>${text}</p>
-            </div>
-            <div class="card-action">
-                    <button class="btn-flat pink-text" onclick="likePost('${postID}')">
-                            <i class="large material-icons">favorite</i>
-                    </button>
-            </div>
-          </div>
-        </div>
-      </div>`;
-  }
 };
 
 /*commID: "pc5KEyoUHF7ayvz6GPSD"
