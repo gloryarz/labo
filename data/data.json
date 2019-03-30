@@ -1,0 +1,89 @@
+[
+    {
+        "nombre" : "Asociación para el Desarrollo Integral de Mujeres Violadas AC",
+        "direccion" : "Salvador Díaz Mirón 140, Cuauhtémoc, CDMX",
+        "estado" : "CDMX",
+        "delegacion" : "Cuauhtémoc",
+        "teléfono" : "5682 7969 ó 5547 8639",
+        "web" : "www.adivac.org",
+        "resumen" : " Imparten cursos psicológicos y legales, en caso de que hayas sido víctima de un delito sexual o quieras prevenir serlo. ",
+        "etiquetas" : ["cursos", "psicología", "legal"],
+        "mail" : "",
+        "facebook" : "",
+        "twitter": "" 
+    },
+    {
+        "nombre" : "Católicas por el Derecho a Decidir",
+        "direccion" : "Coyoacán, CDMX",
+        "estado" : "CDMX",
+        "delegacion" : "Coyoacán",
+        "teléfono" : "5554 5748",
+        "web" : "https://catolicasmexico.org/ns/",
+        "resumen" : "Están dedicadas a la ayuda de mujeres en caso de hacer sido víctimas de violencia sexual o si estás embarazada.",
+        "etiquetas" : ["violencia sexual", "embarazo"],
+        "mail" : "",
+        "facebook" : "",
+        "twitter": ""  
+    }, {
+        "nombre" : "Centro de Apoyo a la Mujer Margarita Magón",
+        "direccion" : "Carlos Pereyra # 113, Col. Viaducto Piedad (Metro Viaducto), Del. Iztacalco, México D. F.",
+        "estado" : "CDMX",
+        "delegacion" : "Iztacalco",
+        "teléfono" : "5519 5845",
+        "web" : "https://catolicasmexico.org/ns/",
+        "resumen" : " Ofrecen asesoría legal y de salud o bien al tratar temas como la perspectiva de género.",
+        "etiquetas" : ["asesoría", "legal", "salud"],
+        "mail" : "cammagon@gmail.com",
+        "facebook" : "https://www.facebook.com/Centro-De-Apoyo-a-La-Mujer-CAM-Margarita-Mag%C3%B3n-AC-1470777906532540/",
+        "twitter": ""  
+    }, {
+        "nombre" : "Coordinadora Nacional de Ayuda a Mujeres Indígenas",
+        "direccion" : "Calle San Simón # 82, depto. 306, Col. San Simón, México D. F.",
+        "estado" : "CDMX",
+        "delegacion" : "Benito Juárez",
+        "teléfono" : "55-32-29-23",
+        "web" : "https://catolicasmexico.org/ns/",
+        "resumen" : "Especializadas en la ayuda para mujeres indígenas. Coadyuvan en el desarrollo de la mujer de otras comunidades.",
+        "etiquetas" : ["desarrollo", "indígenas"],
+        "mail" : "mujeresindigenasconami@gmail.com",
+        "facebook" : "https://www.facebook.com/mujeresindigenasconamimexico/",
+        "twitter": ""  
+    } , {
+        "nombre" : "Casa Gaviota",
+        "direccion" : " Cruz Blanca #17, Col. del Carmen Coyoacan",
+        "estado" : "CDMX",
+        "delegacion" : "Coyoacán",
+        "teléfono" : "30 96 51 89",
+        "web" : "https://www.casagaviota.org.mx",
+        "resumen" : "Ayudan a detectar la violencia intrafamiliar y hacia la mujer.",
+        "etiquetas" : ["violencia", "intrafamiliar"],
+        "mail" : "",
+        "facebook" : "",
+        "twitter": ""  
+    } , {
+        "nombre" : "Casa Semillas",
+        "direccion" : " Cruz Blanca #17, Col. del Carmen Coyoacan",
+        "estado" : "CDMX",
+        "delegacion" : "Coyoacán",
+        "teléfono" : "5553 2900 y 5553 0109",
+        "web" : "https://www.semillas.org.mx",
+        "resumen" : "Luchan por la igualdad de género y dan asesoría a mujeres que han sufrido de violencia.",
+        "etiquetas" : ["violencia", "asesoria"],
+        "mail" : "",
+        "facebook" : "",
+        "twitter": ""  
+    } , {
+        "nombre" : "La Casa Mandarina",
+        "direccion" : "Av. Pdte. Masaryk 178, Polanco, Polanco V Secc, 11570 Ciudad de México, CDMX",
+        "estado" : "CDMX",
+        "delegacion" : "Miguel Hidalgo",
+        "teléfono" : "5250 4859",
+        "web" : "https://www.lacasamandarina.org",
+        "resumen" : "",
+        "etiquetas" : ["niños", "niñas", "pedofilia", "violencia sexual", "violencia"],
+        "mail" : "",
+        "facebook" : "",
+        "twitter": ""  
+    }
+
+]

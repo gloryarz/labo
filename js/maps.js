@@ -102,3 +102,14 @@ map.setCenter(coords);
 map.setZoom(16);
 map.addObject(marker);
 })};
+
+
+const url = 'https://raw.githubusercontent.com/gloryarz/hack_laboratorians/master/src/data/organizaciones.json';
+fetch(url).then(resp => resp.json())
+.then(data => {
+  console.log(data)
+  const dataArr = data;
+  dataArr.forEach(el => {
+    console.log(el.nombre)
+  });
+})
