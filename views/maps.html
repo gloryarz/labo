@@ -1,15 +1,37 @@
 <html>
   <head>
-  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-  
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
   </head>
   <body>
-  <div style="width: 640px; height: 480px" id="mapContainer"></div>
-  <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
-<script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
-<script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
-<script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
-<script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
-  <script src="../js/maps.js"></script>
+    <select id="tagValue" onchange="getTagValue(this)">
+      <option value="">Categorías</option>
+      <option value="Acoso">Acoso</option>
+      <option value="Legal">Legal</option>
+      <option value="Violación">Violación</option>
+    </select>
+
+    <div style="width: 640px; height: 480px" id="mapContainer"></div>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893"
+    />
+    <script
+      type="text/javascript"
+      src="https://js.api.here.com/v3/3.0/mapsjs-core.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://js.api.here.com/v3/3.0/mapsjs-service.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"
+    ></script>
+    <script src="../js/maps.js"></script>
   </body>
 </html>
