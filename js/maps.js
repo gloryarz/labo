@@ -5,6 +5,7 @@ const platform = new H.service.Platform({
   useHTTPS : true
   });
 
+
 /*// Initialize the platform object:
 const platform = new H.service.Platform({
   'app_id': '6KZF7fTyJhZnoww41JjO',
@@ -104,13 +105,13 @@ map.setZoom(16);
 map.addObject(marker);
 })};
 
-
 const url = 'https://raw.githubusercontent.com/gloryarz/labo/master/data/data.json';
 fetch(url).then(resp => resp.json())
 .then(data => {
   console.log(data)
   const dataArr = data;
   dataArr.forEach(el => {
-    console.log(el.nombre)
+    console.log(el.nombre, el.direccion, el.delegacion, el.telefono, el.web, el.resumen, el.mail, el.etiquetas, el.facebook, el.twitter, el.categoria,  el.latitud, el.longitud)
+    
   });
 })
