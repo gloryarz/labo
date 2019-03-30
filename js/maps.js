@@ -1,3 +1,5 @@
+var value = 'Legal';
+
 // HERE Keys
 const platform = new H.service.Platform({
   app_id: '3Z54Y9jNR2aDfCoqEpKF' ,
@@ -49,19 +51,47 @@ fetch(url).then(resp => resp.json())
   console.log(data)
   const dataArr = data;
   dataArr.forEach(el => {
-    workTheData(el.nombre, el.direccion, el.delegacion, el.telefono, el.web, el.resumen, el.mail, el.etiquetas, el.facebook, el.twitter, el.categoria,  el.latitud, el.longitud)
+    const numberOrg = dataArr.length;
+    workTheData(el.nombre, el.direccion, el.delegacion, el.telefono, el.web, el.resumen, el.mail, el.etiquetas, el.facebook, el.twitter, el.categoría,  el.latitud, el.longitud, numberOrg)
   });
 })
 
 
 const getTagValue = (selectObject) => {
-  var value = selectObject.value; 
+  value = selectObject.value; 
   console.log(value) 
 }
 
-const workTheData = (nombre, direccion, delegacion, telefono, web, resumen, mail, etiquetas, facebook, twitter, categoria, latitud, longitud) => {
+const workTheData = (nombre, direccion, delegacion, telefono, web, resumen, mail, etiquetas, facebook, twitter, categoria, latitud, longitud, number) => {
+  var dataPoints = [];
+  if (categoria == value){
   
-}
+  console.log(latitud, longitud)
+  console.log(categoria, value)
+  dataPoints.push(new H.clustering.DataPoint(latitud, longitud));
 
+  console.log('hola')
+  console.log(dataPoints)
+  }
+  
+  /*
+  var maptypes = platform.createDefaultLayers();
+  var map = new H.Map(
+    document.getElementById('mapContainer'),
+    maptypes.normal.map,
+    {
+      zoom: 10,
+      center: { lng: 19.4212253, lat: -99.1630477 }
+    }); 
+ 
+ for (let index = 0; index < number; index++) {  
+  coords = {lat: latitud, lng: longitud},
+  marker = new H.map.Marker(coords);
+  map.setCenter(coords);
+  map.setZoom(8);
+  map.addObject(marker);
+
+ }*/
+}
 
 
