@@ -52,7 +52,18 @@ fetch(url).then(resp => resp.json())
   const dataArr = data;
   dataArr.forEach(el => {
     const numberOrg = dataArr.length;
-    workTheData(el.nombre, el.direccion, el.delegacion, el.telefono, el.web, el.resumen, el.mail, el.etiquetas, el.facebook, el.twitter, el.categoría,  el.latitud, el.longitud, numberOrg)
+    let creandoArr = []
+    const nombre = el.nombre
+    const categoría = el.categoría;
+    const latitud = el.latitud;
+    const longitud = el.longitud 
+
+    creandoArr.push({"nombre" : nombre,
+    "categoria" : categoría,
+    "latitud" : latitud,
+     "longitud" : longitud 
+  })
+   // workTheData(el.nombre, el.direccion, el.delegacion, el.telefono, el.web, el.resumen, el.mail, el.etiquetas, el.facebook, el.twitter, el.categoría,  el.latitud, el.longitud, numberOrg)
   });
 })
 
@@ -63,16 +74,36 @@ const getTagValue = (selectObject) => {
 }
 
 const workTheData = (nombre, direccion, delegacion, telefono, web, resumen, mail, etiquetas, facebook, twitter, categoria, latitud, longitud, number) => {
+  var hola = [];
+  for(let i = 0; i > number; i++){
+    hola.push(nombre);
+  }
+  console.log(hola);
+
+}
+
+
+/*
   var dataPoints = [];
   if (categoria == value){
-  
+  let hola = [];
+  hola.push('lex');
+  console.log(hola)
   console.log(latitud, longitud)
   console.log(categoria, value)
   dataPoints.push(new H.clustering.DataPoint(latitud, longitud));
 
   console.log('hola')
   console.log(dataPoints)
-  }
+  var clusteredDataProvider = new H.clustering.Provider(dataPoints, {
+    min: 1,
+    max: 10,
+    clusteringOptions: {
+    eps: 32,
+    minWeight: 3
+    }
+  });
+  }*/
   
   /*
   var maptypes = platform.createDefaultLayers();
@@ -92,6 +123,3 @@ const workTheData = (nombre, direccion, delegacion, telefono, web, resumen, mail
   map.addObject(marker);
 
  }*/
-}
-
-
