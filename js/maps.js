@@ -1,4 +1,10 @@
-// Initialize the platform object:
+// HERE Keys
+const platform = new H.service.Platform({
+  'app_id': '3Z54Y9jNR2aDfCoqEpKF' ,
+  'app_code': 'MnCWGRtOH6dYTDHnw8L7sg'
+  });
+
+/*// Initialize the platform object:
 const platform = new H.service.Platform({
   'app_id': '6KZF7fTyJhZnoww41JjO',
   'app_code': '0DJqkbCOzlBYeMqbXIUw9w'
@@ -29,9 +35,9 @@ if (navigator.geolocation) {
           lng: pos.lng,
           lat: pos.lat
         }
-      });*/
+      });*/ 
 
-
+/*
 const maptypes = platform.createDefaultLayers();
 const map = new H.Map(
   document.getElementById('mapContainer'),
@@ -59,3 +65,33 @@ map.addObject(marker);
 
 // https://github.com/heremaps/examples/#simple-examples
 
+*/
+
+
+// Initialize the platform object:
+
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      }
+      console.log(pos.lat, pos.lng)
+      
+    
+
+
+  // Obtain the default map types from the platform object
+  var maptypes = platform.createDefaultLayers();
+
+  // Instantiate (and display) a map object:
+  var map = new H.Map(
+  document.getElementById('mapContainer'),
+  maptypes.normal.map,
+  {
+    zoom: 16,
+    center: { lng: pos.lng, lat: pos.lat }
+  });
+
+})};
