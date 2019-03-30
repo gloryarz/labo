@@ -29,6 +29,8 @@ const getTheme = (x) => {
   asignTheme = x
 }
 
+const dateBuilder = new Date()
+  const getDate =  dateBuilder.toLocaleDateString()
 // Función para subir mensaje a firestore
 btnPost.addEventListener('click', el => {
   // Se obtiene el valor del input
@@ -54,7 +56,8 @@ btnPost.addEventListener('click', el => {
         post: posted, // Texto del post
         comments: commented,
         title : getTitle, 
-        theme : asignTheme
+        theme : asignTheme,
+        "fecha": getDate
       })
       .then(function (docRef) {
         console.log('Document written with ID: ', docRef.id);

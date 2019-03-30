@@ -12,7 +12,10 @@ db.collection('posted').onSnapshot((querySnapshot) => {
       let text = doc.data().post; // Texto del post
       let userId = doc.data().user; // ID del usuario logeado
       let bringComments = doc.data().comments;
-      printPost(postID, postName, text, userId, bringComments);
+      let title = doc.data().title;
+      let theme = doc.data().theme;
+      let fecha = doc.data().fecha;
+      printPost(postID, postName, text, userId, bringComments, title, theme, fecha);
       console.log(bringComments)
     });
   
@@ -34,44 +37,31 @@ db.collection('posted').onSnapshot((querySnapshot) => {
   nombre de usuario, texto y botón de like.
   Se utiliza onclick para accionar los botones, se pasa como parámetro el ID del post   
   */
-  const printPost = (postID, postName, text, userId, bringComments) => {
+  const printPost = (postID, postName, text, userId, bringComments, title, theme, fecha) => {
     if (postID == selectedID){ 
     let newID = postID + 1;
     let commentID = postID + 2;
     console.log('inside', bringComments)
     
-      comentarios.innerHTML += `<div class="row">
-          <div class="col s12 m6">
-            <div class="card blue-grey lighten-5">
-              <div class="card-content black-text">
-                <span class="card-title pink-text">${postName}</span>
-                <p>${text}</p>
-              </div>
-              <div id="${newID}">
-                <input placeholder="Escribe tu comentario" id="${commentID}">
-                <button onclick="addComment('${postID}','${bringComments}','${commentID}','${newID}')">Clik me</button>
-              </div>
-              <div class="card-action">
-                      <button class="btn-flat pink-text" onclick="likePost('${postID}')">
-                              <i class="large material-icons">favorite</i>
-                      </button>
-                      <button class="btn-flat" onclick="editPost('${postID}')">
-                              <i class="large material-icons">mode_edit</i>
-                      </button>
-                      <button class="btn-flat" onclick="deletePost('${postID}','${postName}', '${text}', '${userId}')">
-                              <i class="large material-icons">delete</i>
-                      </button>
-                      
-                      
-              </div>
-            </div>
-          </div>
-        </div>`;} 
+      comentarios.innerHTML += `
+      <h5>${postName}</h5>
+      <h5>${title}</h5>
+
+      <p>${text}</p>
+
+      <p>${theme}</p>
+      
+      <p>Publicado ${fecha}</p>
+
+      <input placeholder="Escribe tu comentario" id="${commentID}">
+      <button onclick="addComment('${postID}','${bringComments}','${commentID}','${newID}', '${userId}')">Clik me</button>
+      `;} 
   };
 
   const responses = document.getElementById('responses');  
 const printComments = (postToPrint) => {
-    //console.log('snape', postToPrint)
+    console.log('snape', postToPrint)
+    
     postToPrint.forEach(el => {
       let commentedName = el.name;
       let commentedID = el.commID;
@@ -80,19 +70,20 @@ const printComments = (postToPrint) => {
       let commentedFecha = el.fecha;
       let commentedHour = el.hour;
         console.log('cmmtd', commentedSpaceID)
+
+      if (selectedID == commentedID){
+        responses.innerHTML += `<div class="">
       
-      responses.innerHTML += `<div class="row">
-      <div class="col-10">
-      <div><p>${commentedName}</p><p>${commentedFecha}</p></div>
-      
+      <p><strong>${commentedName} respondió</strong> ${commentedFecha}</p>
       <p>${commentedTxt}</p>
-      </div>  
-      </div>`
-      console.log(commentedID, commentedSpaceID, commentedName, commentedTxt, commentedFecha,  commentedHour)
       
+      </div> `
+      }  
+     
+      console.log(commentedID, commentedSpaceID, commentedName, commentedTxt, commentedFecha,  commentedHour)
     });
-   
-  }
+}
+  
 
   /*
   const printComments = (postToPrint) => {
@@ -129,7 +120,7 @@ const printComments = (postToPrint) => {
     console.log(addingComment.value)
     let newComment = addingComment.value
     let commentObj = {
-      "name": "Gloria",
+      "name": "Anónimo",
       "hour": "5:50",
       "fecha": getDate,
       "commentTxt": newComment,

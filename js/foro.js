@@ -19,8 +19,8 @@ db.collection('posted').onSnapshot((querySnapshot) => {
 
   const printPost = (postID, userName, text, bringComments, theme, title) => {
       
-    if(text.length > 20){
-        shortText = text.substring(0,20);
+    if(text.length > 40){
+        shortText = text.substring(0,40);
     } else {
         shortText = text;
     }
