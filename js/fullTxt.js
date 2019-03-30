@@ -69,7 +69,7 @@ db.collection('posted').onSnapshot((querySnapshot) => {
         </div>`;} 
   };
 
-  
+  const responses = document.getElementById('responses');  
 const printComments = (postToPrint) => {
     //console.log('snape', postToPrint)
     postToPrint.forEach(el => {
@@ -79,9 +79,9 @@ const printComments = (postToPrint) => {
       let commentedTxt = el.commentTxt
       let commentedFecha = el.fecha;
       let commentedHour = el.hour;
-  
-      const divComment = document.getElementById(commentedSpaceID);
-      divComment.innerHTML += `<div class="row">
+        console.log('cmmtd', commentedSpaceID)
+      
+      responses.innerHTML += `<div class="row">
       <div class="col-10">
       <div><p>${commentedName}</p><p>${commentedFecha}</p></div>
       
@@ -94,6 +94,32 @@ const printComments = (postToPrint) => {
    
   }
 
+  /*
+  const printComments = (postToPrint) => {
+    //console.log('snape', postToPrint)
+    postToPrint.forEach(el => {
+      let commentedName = el.name;
+      let commentedID = el.commID;
+      let commentedSpaceID = el.commSpaceID;
+      let commentedTxt = el.commentTxt
+      let commentedFecha = el.fecha;
+      let commentedHour = el.hour;
+        console.log('cmmtd', commentedSpaceID)
+      const divComment = document.getElementById(commentedSpaceID);
+      divComment.innerHTML += `<div class="row">
+      <div class="col-10">
+      <div><p>${commentedName}</p><p>${commentedFecha}</p></div>
+      
+      <p>${commentedTxt}</p>
+      </div>  
+      </div>`
+      console.log(commentedID, commentedSpaceID, commentedName, commentedTxt, commentedFecha,  commentedHour)
+      
+    });
+   
+  }*/
+  const dateBuilder = new Date()
+  const getDate =  dateBuilder.toLocaleDateString()
   const addComment = (postID, bringComments, commentID, newID) => {
     console.log(postID, bringComments, commentID)
   
@@ -105,7 +131,7 @@ const printComments = (postToPrint) => {
     let commentObj = {
       "name": "Gloria",
       "hour": "5:50",
-      "fecha": "03/05/29",
+      "fecha": getDate,
       "commentTxt": newComment,
       "commID": postID,
       "commSpaceID": newID
