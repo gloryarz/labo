@@ -1,7 +1,8 @@
 // HERE Keys
 const platform = new H.service.Platform({
-  'app_id': '3Z54Y9jNR2aDfCoqEpKF' ,
-  'app_code': 'MnCWGRtOH6dYTDHnw8L7sg'
+  app_id: '3Z54Y9jNR2aDfCoqEpKF' ,
+  app_code: 'MnCWGRtOH6dYTDHnw8L7sg',
+  useHTTPS : true
   });
 
 /*// Initialize the platform object:
@@ -104,7 +105,7 @@ map.addObject(marker);
 })};
 
 
-const url = 'https://raw.githubusercontent.com/gloryarz/hack_laboratorians/master/src/data/organizaciones.json';
+const url = 'https://raw.githubusercontent.com/gloryarz/labo/master/data/data.json';
 fetch(url).then(resp => resp.json())
 .then(data => {
   console.log(data)
