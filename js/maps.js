@@ -94,4 +94,11 @@ map.addObject(marker);
     center: { lng: pos.lng, lat: pos.lat }
   });
 
+  coords = {lat: pos.lat, lng: pos.lng},
+  marker = new H.map.Marker(coords);
+
+  // Set map center and zoom, add the marker to the map:
+map.setCenter(coords);
+map.setZoom(16);
+map.addObject(marker);
 })};
