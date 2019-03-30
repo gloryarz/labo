@@ -1,3 +1,6 @@
+const selectedID = localStorage.getItem('selectedID');
+console.log('ID i love myself', selectedID)
+
 
 // Se obtienen mensajes de firestore
 db.collection('posted').onSnapshot((querySnapshot) => {
@@ -32,6 +35,7 @@ db.collection('posted').onSnapshot((querySnapshot) => {
   Se utiliza onclick para accionar los botones, se pasa como parámetro el ID del post   
   */
   const printPost = (postID, postName, text, userId, bringComments) => {
+    if (postID == selectedID){ 
     let newID = postID + 1;
     let commentID = postID + 2;
     console.log('inside', bringComments)
@@ -62,7 +66,7 @@ db.collection('posted').onSnapshot((querySnapshot) => {
               </div>
             </div>
           </div>
-        </div>`;
+        </div>`;} 
   };
 
   

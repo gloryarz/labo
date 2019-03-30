@@ -27,7 +27,7 @@ db.collection('posted').onSnapshot((querySnapshot) => {
     console.log()
     
     smallTxt.innerHTML += `
-      <a href="fullTxt.html" class="collection-item">
+      <a href="fullTxt.html" class="collection-item" onclick="saveId('${postID}')">
       <span>${userName}</span>
       <li class="collection-item avatar">
       <i class="material-icons circle">account_circle</i>
@@ -41,3 +41,8 @@ db.collection('posted').onSnapshot((querySnapshot) => {
     </li>
       </a>`
   }
+
+  const saveId = (postID) => {
+    localStorage.setItem('selectedID', postID);
+  }
+
