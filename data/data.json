@@ -10,7 +10,10 @@
         "etiquetas" : ["cursos", "psicología", "legal"],
         "mail" : "",
         "facebook" : "",
-        "twitter": "" 
+        "twitter": "", 
+        "categoría" : "Legal",
+        "latitud": 19.449345, 
+        "longitud" : -99.159228  
     },
     {
         "nombre" : "Católicas por el Derecho a Decidir",
@@ -23,7 +26,10 @@
         "etiquetas" : ["violencia sexual", "embarazo"],
         "mail" : "",
         "facebook" : "",
-        "twitter": ""  
+        "twitter": "",
+        "categoría" : "Aborto", 
+        "latitud": 21.118586,
+        "longitud" : -101.680914  
     }, {
         "nombre" : "Centro de Apoyo a la Mujer Margarita Magón",
         "direccion" : "Carlos Pereyra # 113, Col. Viaducto Piedad (Metro Viaducto), Del. Iztacalco, México D. F.",
@@ -35,7 +41,10 @@
         "etiquetas" : ["asesoría", "legal", "salud"],
         "mail" : "cammagon@gmail.com",
         "facebook" : "https://www.facebook.com/Centro-De-Apoyo-a-La-Mujer-CAM-Margarita-Mag%C3%B3n-AC-1470777906532540/",
-        "twitter": ""  
+        "twitter": "",
+        "categoría" : "Legal",  
+        "latitud": 19.401096,
+        "longitud" : -99.135032
     }, {
         "nombre" : "Coordinadora Nacional de Ayuda a Mujeres Indígenas",
         "direccion" : "Calle San Simón # 82, depto. 306, Col. San Simón, México D. F.",
@@ -47,7 +56,10 @@
         "etiquetas" : ["desarrollo", "indígenas"],
         "mail" : "mujeresindigenasconami@gmail.com",
         "facebook" : "https://www.facebook.com/mujeresindigenasconamimexico/",
-        "twitter": ""  
+        "twitter": "",
+        "categoría" : "Violación",
+        "latitud": 19.419745, 
+        "longitud" : -99.156485  
     } , {
         "nombre" : "Casa Gaviota",
         "direccion" : " Cruz Blanca #17, Col. del Carmen Coyoacan",
@@ -59,7 +71,10 @@
         "etiquetas" : ["violencia", "intrafamiliar"],
         "mail" : "",
         "facebook" : "",
-        "twitter": ""  
+        "twitter": "",
+        "categoría" : "Violación",
+        "latitud": 19.352148, 
+        "longitud" : -99.153031       
     } , {
         "nombre" : "Casa Semillas",
         "direccion" : " Cruz Blanca #17, Col. del Carmen Coyoacan",
@@ -71,7 +86,10 @@
         "etiquetas" : ["violencia", "asesoria"],
         "mail" : "",
         "facebook" : "",
-        "twitter": ""  
+        "twitter": "",
+        "categoría" : "Legal",
+        "latitud": 19.352328, 
+        "longitud" : -99.152988       
     } , {
         "nombre" : "La Casa Mandarina",
         "direccion" : "Av. Pdte. Masaryk 178, Polanco, Polanco V Secc, 11570 Ciudad de México, CDMX",
@@ -83,7 +101,10 @@
         "etiquetas" : ["niños", "niñas", "pedofilia", "violencia sexual", "violencia"],
         "mail" : "",
         "facebook" : "",
-        "twitter": ""  
+        "twitter": "",
+        "categoría" : "Violación",
+        "latitud": 19.431579, 
+        "longitud" : -99.188759         
     }
 
 ]
